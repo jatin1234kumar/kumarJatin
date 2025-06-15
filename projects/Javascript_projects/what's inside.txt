@@ -1,5 +1,0 @@
-project_1 : Alarm clock
-project_2 : Basic calculator
-project_3 : Quadratic Equation solver
-project_4 : Hold number game
-project_5 : SignUp page with password cheacker.
