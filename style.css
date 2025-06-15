@@ -205,6 +205,10 @@ a.nav-link:hover::before {
   padding: 0.8rem;
 }
 
+.aboutSmCont i {
+  font-size: 2.2rem;
+}
+
 .aboutSmCont:first-child {
   margin-right: 1rem;
 }
