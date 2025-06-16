@@ -64,9 +64,25 @@ section {
   overflow: hidden;
 }
 
-/****************** section elements *****************/
+/**************************************************** loader funtion *******************************************************/
+
+/********************************************** section elements ********************************************/
 
 /* Nav Section */
+
+.nav {
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-3rem);
+  animation: animation 1s ease forwards;
+}
+
+@keyframes animation {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 
 h1.navbar-brand {
   font-size: 1.5rem;
@@ -89,7 +105,7 @@ a.nav-link::before {
   transform: translateY(0.1rem);
   opacity: 0;
   height: 2px;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   background-color: var(--secondary-color);
 }
 
@@ -143,6 +159,9 @@ a.nav-link:hover::before {
   width: clamp(300px, 100%, 350px);
   margin: 0 auto;
   margin-bottom: 0 !important;
+  transform: scale(0.4);
+  opacity: 0;
+  animation: animation 0.8s 0.3s ease forwards;
 }
 
 .col2Item {
@@ -150,6 +169,36 @@ a.nav-link:hover::before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.col2Item p {
+  transform: translateY(-1rem);
+  opacity: 0;
+  animation: animation 0.8s 0.3s cubic-bezier(0.25, 0.1, 0.48, 1.55) forwards;
+}
+
+.col2Item h1 {
+  transform: translateY(-1rem);
+  opacity: 0;
+  animation: animation 0.8s 0.4s cubic-bezier(0.25, 0.1, 0.48, 1.55) forwards;
+}
+
+.col2Item h2 {
+  transform: translateY(-1rem);
+  opacity: 0;
+  animation: animation 0.8s 0.5s cubic-bezier(0.25, 0.1, 0.48, 1.55) forwards;
+}
+
+.col2Item .btnCont {
+  transform: translateY(-1rem);
+  opacity: 0;
+  animation: animation 0.8s 0.6s cubic-bezier(0.25, 0.1, 0.48, 1.55) forwards;
+}
+
+.col2Item .iconCont {
+  transform: translateY(-1rem);
+  opacity: 0;
+  animation: animation 0.8s 0.7s cubic-bezier(0.25, 0.1, 0.48, 1.55) forwards;
 }
 
 .iconCont {
@@ -178,13 +227,22 @@ a.nav-link:hover::before {
   margin-right: 0.5rem;
 }
 
-/* about section */
+/**************** about section *************************/
 
 #about .row.mt-5 .row {
   display: flex;
   justify-content: space-between;
   width: 100%;
   flex-direction: row;
+}
+
+.aboutImg {
+  opacity: 0;
+  transform: translateY(-3rem);
+}
+
+.aboutImg.visible {
+  animation: animation 0.8s ease forwards;
 }
 
 .aboutCont {
@@ -196,6 +254,8 @@ a.nav-link:hover::before {
 
 .aboutSmCont {
   width: 47%;
+  opacity: 0;
+  transform: translateY(-2rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -203,6 +263,19 @@ a.nav-link:hover::before {
   border: 1px solid var(--secondary-color);
   border-radius: 20px;
   padding: 0.8rem;
+}
+
+.aboutSmCont.visible {
+  animation: animation 0.8s ease forwards;
+}
+
+.aboutText {
+  opacity: 0;
+  transform: translateY(-2rem);
+}
+
+.visible .aboutText {
+  animation: animation 0.8s ease forwards;
 }
 
 .aboutSmCont i {
@@ -213,12 +286,18 @@ a.nav-link:hover::before {
   margin-right: 1rem;
 }
 
-/* experience section */
+/********************** experience section *****************************/
 
 .exContCol {
   border-radius: 20px;
   padding: 1rem;
   border: 1px solid black;
+  transform: translateY(-2rem);
+  opacity: 0;
+}
+
+.exContCol.visible {
+  animation: animation 0.8s ease forwards;
 }
 
 .exSmCont {
@@ -244,7 +323,25 @@ a.nav-link:hover::before {
   margin-bottom: 0;
 }
 
-/* project section */
+/*********************************** project section **************************/
+
+.nav-pills {
+  opacity: 0;
+  transform: translateY(-2rem);
+}
+
+.nav-pills.visible {
+  animation: animation 0.8s ease forwards;
+}
+
+.tab-content {
+  opacity: 0;
+  transform: translateY(-3rem);
+}
+
+.tab-content.visible {
+  animation: animation 0.8s ease forwards;
+}
 
 .card {
   border-radius: 20px;
